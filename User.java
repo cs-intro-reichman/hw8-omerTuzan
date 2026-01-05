@@ -73,13 +73,17 @@
 
         int i = 0;
         int offset = 0;
+        int secondOffset = 1;
         while (i < this.fCount) {
-            if (i == this.fCount - 1) {break;}
 
             if (this.follows[i].equals(name)) {
                 offset = 1;
             }
-            this.follows[i] = this.follows[i + offset];
+
+            if (i == this.fCount - 1) {
+                secondOffset = 0;
+            }
+            this.follows[i] = this.follows[i + offset * secondOffset];
             i++;
         }
 

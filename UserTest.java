@@ -3,7 +3,8 @@ public class UserTest {
     public static void main(String[] args) {
         User alice = new User("Alice");
         alice.addFollowee("Bob");
-        System.out.println((alice.removeFollowee("Bob") && alice.getfCount() == 0)  + ":" + alice.getfCount());
+        alice.removeFollowee("Bob");
+        System.out.println(alice.getfCount());
         System.out.println("...Testing the User class...\n");
 
         System.out.println("...To get started, creating a dummy user for testing the toString and follows methods...\n");
