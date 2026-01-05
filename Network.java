@@ -117,11 +117,13 @@ public class Network {
     public String toString() {
        //// Replace the following statement with your code
        String netStr = "Network:";
+       String Oper = "\n";
        if (this.userCount == 0) {return netStr;}
 
-       netStr = this.users[0].toString();
-       for (int i = 1; i < userCount; i++) {
-          netStr = "\n" + this.users[i];
+
+       for (int i = 0; i < this.userCount; i++) {
+          if (i == this.userCount - 1) {Oper = "";}
+          netStr = this.users[i].toString() + Oper;
        }
        return netStr;
     }
