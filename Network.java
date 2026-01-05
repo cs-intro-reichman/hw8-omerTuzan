@@ -54,7 +54,7 @@ public class Network {
      *  or if the "follows" addition failed for some reason, returns false. */
     public boolean addFollowee(String name1, String name2) {
         //// Replace the following statement with your code
-        if(this.getUser(name1) == null || this.getUser(name2) == null) {return false;}
+        if(this.getUser(name1) == null || this.getUser(name2) == null || name1 == name2) {return false;}
         return this.getUser(name1).addFollowee(name2);
     }
     
@@ -116,7 +116,7 @@ public class Network {
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
        //// Replace the following statement with your code
-       String netStr = "";
+       String netStr = "Network:";
        if (this.userCount == 0) {return netStr;}
 
        netStr = this.users[0].toString();
