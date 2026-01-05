@@ -73,8 +73,9 @@
 
         int i = 0;
         int offset = 0;
+        while (i < this.fCount) {
+            if (i == this.fCount - 1) {break;}
 
-        while (i < this.fCount - 1) {
             if (this.follows[i].equals(name)) {
                 offset = 1;
             }
